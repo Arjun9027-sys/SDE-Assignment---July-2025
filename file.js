@@ -1,7 +1,3 @@
-// Assuming the processData function is defined as in the previous response
-// If you're running this as a Node.js module, you'd typically import it like this:
-// const { processData } = require('./yourModuleFileName.js');
-
 function processData(data) {
     let totalCodes = data.length;
     let validCodesCount = 0;
@@ -17,7 +13,6 @@ function processData(data) {
         } else {
             for (let j = 0; j < 3; j++) {
                 let char = code[j];
-                // Corrected the typo 'b' to 'z' for uppercase and lowercase alphabet check
                 if (!((char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z'))) {
                     isValid = false;
                     break;
@@ -52,9 +47,6 @@ function processData(data) {
         normalizedValidCodes: normalizedValidCodes,
     };
 }
-
-
-// --- How to use it and console the output ---
 
 const productCodes = ["abc1234", "XYZ0001", "123ABCD", "A1B2C3D", "lmn9876", "DEF5678"];
 
